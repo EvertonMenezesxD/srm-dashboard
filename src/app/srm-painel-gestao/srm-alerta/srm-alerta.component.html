@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-body container">
+    <h5 class="card-title">Alertas</h5>
+    <hr class="my-4">
+    <div class="form-group row" *ngFor="let item of alertas">
+      <label class="col-sm-5 col-form-label"> {{item.quantidade}} {{item.tipoNota}}</label>
+      <div class="col-md-6">
+        <div *ngIf="item.flacao == true">
+          <div class="dropdown">
+            <a class="btn btn-light dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Ações
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" (click)="adicinar(item)">Adicionar</a>
+              <a class="dropdown-item" (click)="remover(item)">Remover</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span _ngcontent-c4="" class="border-bottom"></span>
+    </div>
+  </div>
+</div>
